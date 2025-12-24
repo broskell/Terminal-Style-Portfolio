@@ -1,0 +1,51 @@
+/* Global Theme Variables */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@300;400;500&display=swap');
+
+:root {
+  --color-bg: #000000;
+  --color-text-primary: #C0C0C0; /* Silver */
+  --color-text-bright: #FFFFFF;
+  --color-gold: #FFD700;
+  --color-gold-dim: #C5A000;
+  --color-terminal-bg: #0c0c0c;
+  --color-terminal-green: #33FF33; /* Classic terminal green, mixed with gold where needed */
+  
+  --font-cinematic: 'Cinzel', serif;
+  --font-terminal: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-terminal);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* Scrollbar Styling for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dim);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
